@@ -1,5 +1,6 @@
 mode: paper              # paper only; live trading is deliberately not implemented
-broker: sim              # sim (built-in fake money) | ibkr (IBKR paper account, port 7497)
+broker: sim              # sim = fake money; the report lists orders to copy into RBC Direct Investing by hand
+                         # (RBC has no trading API). ibkr = IBKR paper account, port 7497
 watchlist: [AAPL, MSFT, NVDA, TSLA, AMD, SPY, SHOP.TO, RY.TO]
 starting_cash: 100000
 

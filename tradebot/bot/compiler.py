@@ -16,5 +16,5 @@ def report(rows: list[dict], actions: list[str], equity: float, cash: float, vix
         h = (r["news"]["headlines"] or [""])[0][:60].replace("|", "/")
         out.append(f"| {i} | {r['ticker']} | {r['score']:+.2f} | {r['news']['score']:+.2f} | "
                    f"{r['whales']['score']:+.2f} | {r['volatility']['score']:+.2f} | {r['volatility']['price']:.2f} | {h} |")
-    out += ["", "## Actions", *([f"- {a}" for a in actions] or ["- none"])]
+    out += ["", "## Actions (paper; to mirror in RBC Direct Investing, enter as limit orders + stop-loss)", *([f"- {a}" for a in actions] or ["- none"])]
     return "\n".join(out)

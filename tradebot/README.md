@@ -26,5 +26,9 @@ Edit `config.yaml` for tickers, risk limits, and signal weights.
 Linux/macOS cron: `*/30 9-16 * * 1-5 cd /path/to/tradebot && .venv/bin/python -m bot.main`
 Windows: Task Scheduler running `python -m bot.main` in this folder.
 
+## RBC Direct Investing
+RBC has no public trading API, so the bot can't place orders there. Keep `broker: sim` and copy the
+report's BUY/SELL lines into RBC by hand (limit order, then a stop-loss at the listed stop) once you trust it.
+
 ## IBKR paper account
 Install `ib_async`, log TWS/IB Gateway into your **paper** account, enable API on port 7497, set `broker: ibkr`.
